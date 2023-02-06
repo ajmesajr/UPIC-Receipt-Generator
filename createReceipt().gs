@@ -1,4 +1,4 @@
-function createReceipt()
+function createReceipt() // based on https://codewithcurt.com/how-to-create-invoice-generator-on-google-sheets/
 {
   // DEFINE ALL ACTIVE SHEETS
   var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -59,7 +59,7 @@ function createReceipt()
   return true;
 }
 
-function InvoiceLog(order_number, customer_name, date_of_order, totalInvoice)
+function InvoiceLog(order_number, customer_name, date_of_order, totalInvoice) // based on https://codewithcurt.com/how-to-create-invoice-generator-on-google-sheets/
 {
   
    //DEFINE ALL ACTIVE SHEETS
@@ -78,7 +78,7 @@ function InvoiceLog(order_number, customer_name, date_of_order, totalInvoice)
   invoiceLogSheet.getRange(nextRowInvoice, 4).setValue(totalInvoice).setNumberFormat("# ###.00");
 }
 
-function printReceipt()
+function printReceipt() // based on https://stackoverflow.com/questions/61219628/export-a-google-sheet-range-as-pdf-using-apps-script-and-store-the-pdf-in-drive
 {
   var ss = SpreadsheetApp.getActiveSpreadsheet(); 
   var printSheet = ss.getSheetByName("Print");    
